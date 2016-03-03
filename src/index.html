@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="bootstrap with handlebars on bottle python framework">
   <meta name="author" content="dexta">
-  <link rel="icon" href="/favicon.ico">
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADHcBQAv6GAAPzv4QDw384ARyYCAM+SUQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMzMzMzMzMyEyIiIiIiIjMjJVVVVVVUIyMlAAAAAAQTIyUAAAAABBMjJQBERAAEEyMyUEESUAQTIzJQQTJQBBMjMlBBMlAEEyMyVEEyUAQTIzMRESUABBMjJVVVUABBMyMlAAAABBMyUyVERERBMyVDMRERERMyUBEzMzMzMyVBEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
 
   <title>bootstrap skeleton</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<style type="text/css">
+body {
+  padding-top: 64px;
+}
+</style>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -55,38 +59,33 @@
       <h1>Bootstrap starter template</h1>
       <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
     </div>
-    <div id="first_row" class="row">    
+    <div class="row">    
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>I meant 'physically'. Look, perhaps you could let me work for a little food? I could clean the floors or paint a fence, or service you sexually? One hundred dollars. Ok, we'll go deliver this crate like professionals, and then we'll go ride the bumper cars.</p>
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>The alien mothership is in orbit here. If we can hit that bullseye, the rest of the dominoes will fall like a house of cards. Checkmate. I usually try to keep my sadness pent up inside where it can fester quietly as a mental illness.</p>
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+      </div>      
     </div>
 
   </div><!-- /.container -->
 
-<script id="entry-box" type="text/x-handlebars-template">
-  <div class="col-md-4">
-    <h2>{{heading}}</h2>
-    <p>{{content}}</p>
-    <p><a class="btn btn-default" href="{{href}}" role="button">{{link}}</a></p>
-  </div>  
-</script>
+<script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/handlebars.js"></script>
-<script src="js/logic.js"></script>
 <script type="text/javascript">
-  // http://slipsum.com/
-  var dataList = [
-    {heading:"first Header",content:"Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense!",href:"#",link:"just an example"},
-    {heading:"2nd Header",content:"In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero.",href:"#",link:"just an example link"},
-  ];
-
   //jquery ready 
   $(function(){
-    for(var i=0,il=dataList.length;i<il;i++) {
-      var data = dataList[i];
-      render_handlebar("entry-box",data,"first_row");  
-    }
   });
-  
 </script>
 </body>
 </html>
