@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="bootstrap with handlebars on bottle python framework">
+  <meta name="author" content="dexta">
+  <link rel="icon" href="/favicon.ico">
+
+  <title>bootstrap skeleton</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Project name</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1>Bootstrap starter template</h1>
+      <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    </div>
+    <div id="first_row" class="row">    
+    </div>
+
+  </div><!-- /.container -->
+
+<script id="entry-box" type="text/x-handlebars-template">
+  <div class="col-md-4">
+    <h2>{{heading}}</h2>
+    <p>{{content}}</p>
+    <p><a class="btn btn-default" href="{{href}}" role="button">{{link}}</a></p>
+  </div>  
+</script>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/handlebars.js"></script>
+<script src="js/logic.js"></script>
+<script type="text/javascript">
+  // http://slipsum.com/
+  var dataList = [
+    {heading:"first Header",content:"Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense!",href:"#",link:"just an example"},
+    {heading:"2nd Header",content:"In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero.",href:"#",link:"just an example link"},
+  ];
+
+  //jquery ready 
+  $(function(){
+    for(var i=0,il=dataList.length;i<il;i++) {
+      var data = dataList[i];
+      render_handlebar("entry-box",data,"first_row");  
+    }
+  });
+  
+</script>
+</body>
+</html>
