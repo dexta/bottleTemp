@@ -54,40 +54,36 @@
     <div class="jumbotron">
       <h1>Bootstrap starter template</h1>
       <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      <p>
+        thanks to <a href="http://slipsum.com">lorem ipsum</a> for the placeholder
+      </p>
     </div>
     <div id="first_row" class="row">    
     </div>
 
   </div><!-- /.container -->
-
-<script id="entry-box" type="text/x-handlebars-template">
+<script id="entry-boxes" type="text/x-handlebars-template">
+  {{#each this}}
   <div class="col-md-4">
     <h2>{{heading}}</h2>
     <p>{{content}}</p>
+    {{#if link}}
     <p><a class="btn btn-default" href="{{href}}" role="button">{{link}}</a></p>
-  </div>  
+    {{/if}}
+  </div>
+  {{/each}}
 </script>
 
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/handlebars.js"></script>
+<script src="js/data.js"></script>
 <script src="js/logic.js"></script>
 <script type="text/javascript">
-  // http://slipsum.com/
-  var dataList = [
-    {heading:"first Header",content:"Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense!",href:"#",link:"just an example"},
-    {heading:"2nd Header",content:"In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero.",href:"#",link:"just an example link"},
-    {heading:"3rd Header",content:"Well, the way they make shows is, they make one show. That show's called a pilot.",href:"http://slipsum.com/",link:"SAMUEL L. IPSUM"}
-  ];
-
   //jquery ready 
   $(function(){
-    for(var i=0,il=dataList.length;i<il;i++) {
-      var data = dataList[i];
-      render_handlebar("entry-box",data,"first_row");  
-    }
+    render_handlebar("entry-boxes",dataList,"first_row");  
   });
-  
 </script>
 </body>
 </html>
