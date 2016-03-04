@@ -11,7 +11,7 @@ Listening on http://0.0.0.0:8423/
 Hit Ctrl-C to quit.
 ```
 
-[go to](http://localhost:8423)
+[go to http://localhost:8423](http://localhost:8423)
 
 > diffrent setups stored in seperated branchs
 
@@ -19,7 +19,8 @@ Hit Ctrl-C to quit.
 simple CDN based bootstrap and jquery index.html, no other local files needed.
 
 # handlebars
-little more advanced handlebars template excample
+little more advanced handlebars template excample.
 
 # grunt
+plus a grundfile with verythink, cream and cherry on top.
 
