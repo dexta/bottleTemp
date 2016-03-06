@@ -42,13 +42,15 @@ module.exports = function(grunt) {
       },
       dev: {
         files: [
-          {expand:true,flatten: true,src:["node_modules/bootstrap/dist/fonts/*","node_modules/font-awesome/fonts/*"],dest:"dev/fonts/"}
+          {expand:true,flatten: true,src:["node_modules/bootstrap/dist/fonts/*","node_modules/font-awesome/fonts/*"],dest:"dev/fonts/"},
+          {src:'src/favicon.ico',dest:'dev/favicon.ico'}
         ]
       },
       build: {
         files: [
           {expand:true,flatten:true,src:'dev/fonts/*',dest:'dist/fonts/'},
-          {expand:true,flatten:true,src:'dev/index.html',dest:'dist/'}
+          {src:'dev/index.html',dest:'dist/index.html'},
+          {src:'src/favicon.ico',dest:'dev/favicon.ico'}
         ]
       }
     },
