@@ -1,7 +1,7 @@
 from pyapp.bottle import route, run, request, response, redirect, static_file
 import json
 
-rootPath = "./src/"
+rootPath = "./dev/"
 
 mimeTypes = { 	'html':'text/html; charset=utf-8', 'js':'text/javascript; charset=utf-8', 'json':'application/javascript; charset=utf-8',
 				'css':'text/css; charset=utf-8', 'png':'image/png',	'jpg':'image/jpeg', 'gif':'image/gif', 'ico':'image/x-icon',
