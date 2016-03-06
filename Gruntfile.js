@@ -109,7 +109,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-include-replace');
 
 
-  grunt.registerTask('setup', ['copy:setup','copy:fonts']);
+  grunt.registerTask('setup', ['copy:setup']);
 
   grunt.registerTask('dev', ['jshint', 'clean:dev', 'includereplace', 'concat', 'copy:dev']);
 
