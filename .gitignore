@@ -1,2 +1,8 @@
 *.pyc
 __pycache__
+node_modules/
+dev/
+dist/
+src/css/libs/
+src/fonts/
+src/js/libs/
