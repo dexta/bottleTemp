@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         files: [
           {expand:true,flatten:true,src:'dev/fonts/*',dest:'dist/fonts/'},
           {src:'dev/index.html',dest:'dist/index.html'},
-          {src:'src/favicon.ico',dest:'dev/favicon.ico'}
+          {src:'src/favicon.ico',dest:'dist/favicon.ico'}
         ]
       }
     },
